@@ -8,7 +8,7 @@ var me = {
 
 // #2 Add a new key/value pair to the me object using dot notation. The new key should be 'faveColor' and set it to your favorite color as a string
 
-me.faveColor = 'maroon'
+me.faveColor = 'maroon';
 
 // #3 Below is an object, 'message'. Below it, add a 'text' key using bracket notation and assign it a string of whatever you would like.
 //DON'T TOUCH THE CODE BELOW
@@ -18,25 +18,34 @@ var message = {
 };
 //DON'T TOUCH THE CODE ABOVE
 // CODE HERE
-text['hello']
+message['text'] = 'hello';
 
 // #4 Create an object called 'adjustCount' and create two methods. One called 'upVote' and one called 'downVote'. upVote should take in a number and add one to it and downVote should take in a number and minus one from it.
 
 // CODE HERE
 var adjustCount = {
-  upVote: 0,
-  downVote: 0
+  upVote: function(num1){
+    console.log(num1 + 1);
+  },
+  downVote: function(num1){
+    console.log(num1 - 1);
+  }
 };
-adjustCount.upVote(1);
-adjustCount.downVote(-1);
+
+var a = 1;
+var b = 2;
+
+adjustCount.upVote(a);
+adjustCount.downVote(b);
 
 // #5 Create an array called 'myFriends' with four of your friends names
 
 var myFriends = ['Cj', 'Kris', 'Jeremy', 'Chad'];
 
 // #6 Add a fifth friends name to the end of your myFriends array
-myFriends.push('Marjo');
 // CODE HERE
+myFriends.push('Marjo');
+
 
 // #7 Create a 'myArrayCopy' variable. It should equal the myArray variable. Use the built in JavaScript method to create a copy.
 //DON'T TOUCH THE CODE BELOW
@@ -44,7 +53,7 @@ var myArray = [1, 2, 3, 4];
 
 //DON'T TOUCH THE CODE ABOVE
 var myArrayCopy = [];
-for(var i = 0; i<myArray.length; i++){
+for(var i = 0; i < myArray.length; i++){
   myArrayCopy.push(myArray[i]);
 }
 console.log(myArrayCopy);
@@ -64,6 +73,7 @@ function evensOnly() {
   return evensArray;
 }
 evensOnly();
+
 // #9 Using filter(), return only your friends of the array of people below. Assign it to a variable called 'trueFriends'.
 // CODE HERE
 var peopleIknow = [
@@ -76,7 +86,7 @@ var peopleIknow = [
 ];
 
 var trueFriends = peopleIknow.filter(function(personName){
-  return personName.friend = true;
+  return personName.friend;
 });
 console.log(trueFriends);
 
@@ -87,9 +97,8 @@ let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
 function indexFinder(){
   var index = [];
   for(var i = 0; i < randomNumbers.length; i++){
-    if(randomNumbers[i]){
-      index.push(i)
-    }
-  }return index;
+    index.push(i)
+  }
+  return index;
 }
 console.log(indexFinder());
